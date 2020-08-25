@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "954574338545",
+    "firebase_url": "https://lbs-abyannaufal.firebaseio.com",
+    "project_id": "lbs-abyannaufal",
+    "storage_bucket": "lbs-abyannaufal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954574338545:android:78c7f711242c578b886c50",
+        "android_client_info": {
+          "package_name": "com.example.lbsabyannaufal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954574338545-73dc50ogne3uf7k895cpjemq72ibe6mj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lbsabyannaufal",
+            "certificate_hash": "71ba4a2481a4b65dde01fb66cfdefdb213525999"
+          }
+        },
+        {
+          "client_id": "954574338545-6i0jg50irknumtcj1a0qjb5ipnn81nvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeNm-lGgu_9YVyjRuBG0_kC24i6UM7cLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954574338545-6i0jg50irknumtcj1a0qjb5ipnn81nvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
