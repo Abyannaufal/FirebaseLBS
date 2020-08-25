@@ -23,11 +23,12 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapLongClickListener  {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapLongClickListener, GoogleMap.OnMarkerClickListener  {
 
     private GoogleMap mMap;
     DatabaseReference dbReference = FirebaseDatabase.getInstance().getReference();
     private ArrayList<Marker> markerList;
+    public static MapsActivity mapsActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,13 +53,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(final GoogleMap googleMap) { //Final Undo
         mMap = googleMap;
         mMap.setOnMapLongClickListener(this);
+        mMap.setOnMarkerClickListener(this);
         markerList = new ArrayList<>();
+        mapsActivity = this;
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng indonesia = new LatLng(1.13288,114.3918343);
+        //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(indonesia));
 
-        dbReference.child("Location").addListenerForSingleValueEvent(new ValueEventListener() {
+        dbReference.child("Wisata").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
@@ -93,4 +96,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+
+        return false;
+    }
 }

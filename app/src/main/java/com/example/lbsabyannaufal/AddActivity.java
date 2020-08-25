@@ -64,7 +64,7 @@ public class AddActivity extends AppCompatActivity {
         if(!isEmptyFields){
             Toast.makeText(AddActivity.this,"Saving data...", Toast.LENGTH_SHORT).show();
 
-            DatabaseReference dbLocation = dbReference.child("Location");
+            DatabaseReference dbLocation = dbReference.child("Wisata");
 
             String id = dbLocation.push().getKey();
             location.setId(id);
